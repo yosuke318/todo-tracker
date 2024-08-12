@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  front:
+    container_name: nextjs
+    build:
+      context: .
+    command: npm run dev
+    volumes:
+      - ./:/app
+    ports:
+      - "3000:3000"
+    tty: true
